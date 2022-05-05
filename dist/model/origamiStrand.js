@@ -4,4 +4,12 @@ class OrigamiStrand extends Strand {
         this.velocity = velocity;
         this.direction = direction;
     }
+
+    freeze() {
+        this.velocity = 0;
+    }
+
+    static fake(strand, startIdx, endIdx) {
+
+    }
 }
