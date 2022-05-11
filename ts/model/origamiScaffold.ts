@@ -5,6 +5,20 @@ class OrigamiScaffold extends Strand {
     return new THREE.Box3();
   }
 
+  getComplementaryStrings(): {
+    complementaryScaffold: string;
+    indices: number[];
+  } {
+    const indices: number[] = [];
+    const complementaryScaffold: string = this.map(
+      (e: BasicElement, index: number) => {
+        indices.push(index);
+        return (e as DNANucleotide).getComplementaryType();
+      }
+    ).join("");
+    return { complementaryScaffold, indices };
+  }
+
   /**
    * Translate the staple by a given amount
    * @param amount Vector3 with the amount to translate the staple

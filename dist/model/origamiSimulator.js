@@ -35,3 +35,28 @@ class OrigamiSimulator {
         return { nucleotides: [], startIdx: 0, endIdx: 0 };
     }
 }
+function mainOrigami() {
+    // const scaffold_complimentary = scaffold.map((value: BasicElement, index: number):boolean => {
+    //   (value as DNANucleotide).getComplimentaryType
+    // });
+    const system = Array.from(elements.values())[0].strand.isCircular()
+    let scaffolds = [];
+    let staples = [];
+    Array.from(elements.values()).forEach((e) => {
+        const strand = e?.strand;
+        if (!strand) {
+            return;
+        }
+        if (strand.isCircular() && !scaffolds.includes(strand)) {
+            scaffolds.push(strand);
+        }
+        else if (!staples.includes(strand)) {
+            staples.push(strand);
+        }
+    });
+
+
+
+    document.getElementById("test123").innerHTML =
+        "<p>" + scaffolds.length + ", " + staples.length + "</p>";
+}

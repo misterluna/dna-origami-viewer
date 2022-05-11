@@ -5,6 +5,7 @@ Simulation settings:
         title="Delete entry">x</button>
     <button class="button" id="oxIP${id}_2" onclick="if(connection) connection.startSimulation()"
         title="Establish connection">►</button>
+    <button class="button" id="oxIP${id}_2" onclick="setupSimulation()" title="Setup Forces">🔀</button>
     <fieldset>
 
         <fieldset id="relax_MC_settings">
@@ -16,6 +17,8 @@ Simulation settings:
 
             <label for="simulationTime">Simulation Time: </label>
             <input type="number" value="20" id="simulationTime" title="">
+
+            <p id="test123">no change</p>
 
             <label for="timeGranuality">Time Granuality (fps): </label>
             <input type="number" value="30" id="timeGranuality" title="">

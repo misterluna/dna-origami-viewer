@@ -6,7 +6,7 @@
     "module": "esnext", // specify module code generation
     //"jsx": "react",             // use typescript to transpile jsx to js
     "target": "esnext", // specify ECMAScript target version
-    //"allowJs": true,             // allow a partial TypeScript and JavaScript codebase
+    "allowJs": true, // allow a partial TypeScript and JavaScript codebase
     "moduleResolution": "node"
   },
   "files": [
@@ -52,7 +52,7 @@
     "./ts/UI/UI.ts",
     "./ts/model/origamiScaffold.ts",
     "./ts/model/origamiSimulator.ts",
-    "./ts/model/origamiStrand.ts",
+    "./ts/model/origamiStaple.ts",
     "ts/ox_serve/live_relax.ts",
     "ts/ox_serve/relax_scenarios.ts",
     "ts/file_handling/order_parameter_selector.ts",
